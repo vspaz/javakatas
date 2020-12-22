@@ -10,8 +10,6 @@ public class CharacterCounter2 {
         for (char c : someString.toCharArray()) {
             charToCount.compute(c, (key, value) -> (value == null) ? 1 : ++ value);
         }
-        for (Map.Entry<Character, Integer> characterToCount : charToCount.entrySet()) {
-            System.out.printf("%s => %s\n", characterToCount.getKey(), characterToCount.getValue());
-        }
+        StringUtils.print(charToCount);
     }
 }
