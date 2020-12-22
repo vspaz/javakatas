@@ -2,7 +2,7 @@ package strings;
 
 import java.util.Map;
 
-public abstract class Counter {
+public abstract class Counter implements ICounter{
     static String someString = "foobarbazzzzfufufuf";
 
     static void print(Map<Character, Integer> charToCount) {
