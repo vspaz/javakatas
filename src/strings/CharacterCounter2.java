@@ -17,6 +17,6 @@ class Counter2 extends Counter {
 public class CharacterCounter2 {
     public static void main(String[] args) {
         Map<Character, Integer> charToInteger = Counter2.countChars();
-        StringUtils.print(charToInteger);
+        Counter2.print(charToInteger);
     }
 }
