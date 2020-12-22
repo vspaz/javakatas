@@ -7,7 +7,7 @@ class Counter2 extends Counter {
     static Map<Character, Integer> countChars() {
         Map<Character, Integer> charToCount = new TreeMap<>();
         for (char c : someString.toCharArray()) {
-            charToCount.compute(c, (key, value) -> (value == null) ? 1 : ++value);
+            charToCount.compute(c, (k, v) -> (v == null) ? 1 : ++v);
         }
         return charToCount;
     }
