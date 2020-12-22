@@ -15,9 +15,7 @@ class Counter {
                 charToCount.put(character, 1);
             }
         }
-        for (Map.Entry<Character, Integer> characterToCount : charToCount.entrySet()) {
-            System.out.printf("%s => %s\n", characterToCount.getKey(), characterToCount.getValue());
-        }
+        StringUtils.print(charToCount);
     }
 }
 
