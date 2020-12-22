@@ -3,7 +3,7 @@ package strings;
 import java.util.Map;
 import java.util.TreeMap;
 
-class Couter2 extends Counter {
+class Counter2 extends Counter {
     static Map<Character, Integer> countChars() {
         Map<Character, Integer> charToCount = new TreeMap<>();
         for (char c : someString.toCharArray()) {
@@ -16,7 +16,7 @@ class Couter2 extends Counter {
 
 public class CharacterCounter2 {
     public static void main(String[] args) {
-        Map<Character, Integer> charToInteger = Couter2.countChars();
+        Map<Character, Integer> charToInteger = Counter2.countChars();
         StringUtils.print(charToInteger);
     }
 }
