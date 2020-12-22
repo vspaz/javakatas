@@ -3,15 +3,8 @@ package strings;
 import java.util.Map;
 import java.util.TreeMap;
 
-
-public class CharacterCounter1 {
-    public static void main(String[] args) {
-        String someString = "foobarbazzzzfufufuf";
-        Map<Character, Integer> charToCount = countChars(someString);
-        StringUtils.print(charToCount);
-    }
-
-    static Map<Character, Integer> countChars(String someString) {
+class Counter1 extends Counter {
+    static Map<Character, Integer> countChars() {
         Map<Character, Integer> charToCount = new TreeMap<>();
         for (char character : someString.toCharArray()) {
             if (charToCount.containsKey(character)) {
@@ -22,5 +15,13 @@ public class CharacterCounter1 {
             }
         }
         return charToCount;
+    }
+
+}
+
+public class CharacterCounter1 {
+    public static void main(String[] args) {
+        Map<Character, Integer> charToCount = Counter1.countChars();
+        Counter1.print(charToCount);
     }
 }
