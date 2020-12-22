@@ -4,7 +4,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 
-class Counter {
+public class CharacterCounter1 {
+    public static void main(String[] args) {
+        String someString = "foobarbazzzzfufufuf";
+        Map<Character, Integer> charToCount = countChars(someString);
+        StringUtils.print(charToCount);
+    }
+
     static Map<Character, Integer> countChars(String someString) {
         Map<Character, Integer> charToCount = new TreeMap<>();
         for (char character : someString.toCharArray()) {
@@ -16,13 +22,5 @@ class Counter {
             }
         }
         return charToCount;
-    }
-}
-
-public class CharacterCounter1 {
-    public static void main(String[] args) {
-        String someString = "foobarbazzzzfufufuf";
-        Map<Character, Integer> charToCount = Counter.countChars(someString);
-        StringUtils.print(charToCount);
     }
 }

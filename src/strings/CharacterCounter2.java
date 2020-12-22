@@ -11,7 +11,7 @@ public class CharacterCounter2 {
         StringUtils.print(charToInteger);
     }
 
-    public static Map<Character, Integer> countChars(String someString) {
+    static Map<Character, Integer> countChars(String someString) {
         Map<Character, Integer> charToCount = new TreeMap<>();
         for (char c : someString.toCharArray()) {
             charToCount.compute(c, (key, value) -> (value == null) ? 1 : ++value);
