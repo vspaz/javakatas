@@ -27,4 +27,10 @@ public class FirstNonRepeatedCharacterTest {
         Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("abcde");
         Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'a');
     }
+
+    @Test
+    public void testEmptyString() {
+        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("");
+        Assert.assertNull(firstNonRepeatedCharacter);
+    }
 }
