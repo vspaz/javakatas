@@ -6,14 +6,12 @@ import org.testng.Assert;
 public class FirstNonRepeatedCharacterTest {
     @Test
     public void testFirstAndOnlyNonRepeatedCharacter() {
-        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("bbaacczaa");
-        Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'z');
+        Assert.assertEquals(Repetition.getFirstNonRepeatedCharacter("bbaacczaa"), (Character) 'z');
     }
 
     @Test
     public void testFirstNonRepeatedCharacterOutOfMany() {
-        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("bbaacclaamnn");
-        Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'l');
+        Assert.assertEquals(Repetition.getFirstNonRepeatedCharacter("bbaacclaamnn"), (Character) 'l');
     }
 
     @Test
@@ -24,13 +22,11 @@ public class FirstNonRepeatedCharacterTest {
 
     @Test
     public void testAllCharactersOccurOnlyOnce() {
-        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("abcde");
-        Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'a');
+        Assert.assertEquals(Repetition.getFirstNonRepeatedCharacter("abcde"), (Character) 'a');
     }
 
     @Test
     public void testEmptyString() {
-        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("");
-        Assert.assertNull(firstNonRepeatedCharacter);
+        Assert.assertNull(Repetition.getFirstNonRepeatedCharacter(""));
     }
 }
