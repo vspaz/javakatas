@@ -5,7 +5,8 @@ import org.testng.Assert;
 
 public class FirstNonRepeatedCharacterTest {
     @Test
-    public void testSwitchBinaryValues() {
-        Assert.assertEquals(1, 1);
+    public void testSingleNonRepeatedCharacter() {
+        Character firstNonRepeatedCharacter = FristNonRepeatedCharacter.getFirstNonRepeatedChar("bbaacczaa");
+        Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'z');
     }
 }
