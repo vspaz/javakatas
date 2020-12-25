@@ -3,8 +3,8 @@ package strings;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-class FristNonRepeatedCharacter {
-    public static Character getFirstNonRepeatedChar(String text) {
+class Repetition {
+    public static Character getFirstNonRepeatedCharacter(String text) {
         Map<Character, Integer> charToCount = new LinkedHashMap<>();
         for (Character c : text.toCharArray()) {
             if (charToCount.containsKey(c)) {
