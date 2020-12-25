@@ -15,4 +15,10 @@ public class FirstNonRepeatedCharacterTest {
         Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("bbaacclaamnn");
         Assert.assertEquals(firstNonRepeatedCharacter, (Character) 'l');
     }
+
+    @Test
+    public void testAllCharactersRepeated() {
+        Character firstNonRepeatedCharacter = Repetition.getFirstNonRepeatedCharacter("bbccaa");
+        Assert.assertNull(firstNonRepeatedCharacter);
+    }
 }
