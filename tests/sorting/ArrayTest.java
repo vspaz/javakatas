@@ -26,4 +26,12 @@ public class ArrayTest {
         Collections.sort(nums, new ReverseComparator());
         Assert.assertEquals(expected, nums);
     }
+
+    @Test
+    void testArraySort() {
+        final int[] nums = {5, 0, 4, 3, 2, 5};
+        final int[] expected = {0, 2, 3, 4, 5, 5};
+        Array.sort(nums);
+        Assert.assertEquals(expected, nums);
+    }
 }
