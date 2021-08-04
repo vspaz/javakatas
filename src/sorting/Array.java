@@ -1,7 +1,7 @@
 package sorting;
 
 public class Array {
-    public static void sort(int nums[]) {
+    public static void bubbleSort(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length - 1; j++) {
                 int curItem = nums[j];
