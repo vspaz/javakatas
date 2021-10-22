@@ -18,6 +18,14 @@ public class Rectangle implements Comparable<Rectangle> {
         this(0, 0);
     }
 
+    public static double getPerimeter(double height, double length) {
+        return (height + length) * 2;
+    }
+
+    public static double getSquare(double height, double length) {
+        return height * length;
+    }
+
     public double getHeight() {
         return height;
     }
@@ -38,16 +46,8 @@ public class Rectangle implements Comparable<Rectangle> {
         return (this.height + this.length) * 2;
     }
 
-    public static double getPerimeter(double height, double length) {
-        return (height + length) * 2;
-    }
-
     public double getSquare() {
         return this.height * this.length;
-    }
-
-    public static double getSquare(double height, double length) {
-        return height * length;
     }
 
     @Override
@@ -56,8 +56,7 @@ public class Rectangle implements Comparable<Rectangle> {
         double square_2 = rectangle.getSquare();
         if (square_1 == square_2) {
             return 0;
-        }
-        else if (square_1 > square_2) {
+        } else if (square_1 > square_2) {
             return 1;
         }
         return -1;
@@ -65,6 +64,6 @@ public class Rectangle implements Comparable<Rectangle> {
 
     @Override
     public boolean equals(Object o) {
-        return getSquare() == ((Rectangle)o).getSquare();
+        return getSquare() == ((Rectangle) o).getSquare();
     }
 }
